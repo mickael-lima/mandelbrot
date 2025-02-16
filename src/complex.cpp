@@ -20,3 +20,16 @@ Complex Complex::square() {
 
     return Complex(real_part, im_part);
 }
+
+bool Complex::is_in_m_set(int n_iteration) {
+    bool is_in = false;
+    Complex zn;
+
+    for(auto i = 0; i <= n_iteration; i++) 
+        zn = (zn.square()) + (*this);
+
+    if(zn.squared_module() <= 4.0)
+        is_in = true;
+
+    return is_in;
+}
