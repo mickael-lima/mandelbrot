@@ -9,5 +9,5 @@ CCFLAGS=-Wall -Werror -pedantic-errors -Weffc++ -Wextra -Wconversion -Wsign-conv
 OJBS = main.o complex.o
 
 all: $(OBJS)
-	$(CC) $(CCFLAGS) main.cpp -o $(PROJ_NAME) $(OBJS)
+	$(CC) $(CCFLAGS) main.cpp src/complex.cpp -o $(PROJ_NAME) $(OBJS)
 
